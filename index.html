@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and Caption Example</title>
+
+    <!-- Bootstrap and CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- style for comparison table -->
+    <style>
+        .baseline-row {
+            background-color: #ffcccc; /* Light Red */
+        }
+
+        .sila-row {
+            background-color: #ccffcc; /* Light Green */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Container for Abstract and Image -->
+    <div class="container mt-5">
+        <div class="content-box shadow p-5 mb-5 bg-white rounded">
+            <div class="text-center">
+                <h1 class="title-text">SILA: Signal-to-Language Augmentation for Enhanced Control in Text-to-Audio Generation</h1>
+                <p class="authors">
+                    <strong> Anonymous Submission </strong>
+                    <!-- <strong>Sonal Kumar<sup>1,2</sup>, Prem Seetharaman<sup>2</sup>, Justin Salamon<sup>2</sup>, Dinesh Manocha<sup>1</sup>, Oriol Nieto<sup>2</sup></strong> -->
+                </p>
+                <p class="affiliations">
+                    <!-- <sup>1</sup>University of Maryland, College Park, MD, USA <br> -->
+                    <!-- <sup>2</sup>Adobe Research, San Francisco, CA, USA <br> -->
+                    <!-- <a href="mailto:sonalkum@umd.edu">sonalkum@umd.edu</a> -->
+                </p>
+            </div>
+            <br>
+            <br>
+            
+            <!-- Abstract Section -->
+            <div class="abstract-text">
+                <p><strong>Abstract:</strong> The field of text-to-audio generation has seen remarkable advancements, yet the ability to finely control the acoustic characteristics of generated audio remains under-explored. In this paper, we introduce a novel yet simple approach to generate sound effects, allowing creators and sound designers to manipulate key acoustic parameters like loudness, pitch, reverb, fade, brightness, and noise during the generation process. These parameters extend beyond traditional Digital Signal Processing (DSP) techniques, incorporating learned representations that capture the subtleties of how sound characteristics can be shaped in context, enabling a richer and more nuanced control over the generated audio. Our approach is model-agnostic and is based on learning the disentanglement between audio and its acoustic features. This innovative approach not only enhances the versatility and expressiveness of text-to-audio generation but also opens new avenues for creative audio production and sound design. Our results demonstrate the effectiveness of this approach in producing high-quality, customizable audio outputs that align closely with user specifications.</p>
+            </div>
+
+            <!-- Image Section -->
+            <figure class="text-center">
+                <img src="SILA.jpg" alt="SILA Illustration" class="img-fluid">
+                <figcaption>
+                    <p><strong>Figure 1:</strong> Illustration of key components of SILA.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Audio and Caption Example Section -->
+    <div class="container">
+        <h1>Text Prompt with descriptors & Generated Audio Examples</h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Text Prompt</th>
+                    <th>Generated Audio</th>
+                </tr>
+            </thead>
+            <tbody id="audio-table-body">
+                <!-- Rows will be inserted dynamically by script.js -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+    <script src="script.js"></script>
+<div class="container mt-5">
+<figure class="text-center">
+    <img src="table2.png" alt="SILA Illustration" class="img-fluid" style="width:450px;height:450px;">
+    <figcaption>
+        <p><strong>Figure 2:</strong> Comparison of average acoustic characteristic values. SILA outperforms the baseline, with scores within the expected range for each feature, indicating improved disentanglement between audio and its characteristics.</p>
+    </figcaption>
+</figure>
+</div>
+<div class="container">
+    <h1>Comparison of Baseline (in red) and SILA (in Green) on "Reveb"</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Text Prompt</th>
+                <th>Generated Audio</th>
+            </tr>
+        </thead>
+        <tbody id="new-audio-table-body">
+            <!-- Rows will be inserted dynamically by secondScript.js -->
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h1>Comparison of Baseline (in red) and SILA (in Green) on "Noise"</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Text Prompt</th>
+                <th>Generated Audio</th>
+            </tr>
+        </thead>
+        <tbody id="noise-audio-table-body">
+            <!-- Rows will be inserted dynamically by secondScript.js -->
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h1>Comparison of Baseline (in red) and SILA (in Green) on "Pitch"</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Text Prompt</th>
+                <th>Generated Audio</th>
+            </tr>
+        </thead>
+        <tbody id="pitch-audio-table-body">
+            <!-- Rows will be inserted dynamically by secondScript.js -->
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h1>Comparison of Baseline (in red) and SILA (in Green) on "Duration"</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Text Prompt</th>
+                <th>Generated Audio</th>
+            </tr>
+        </thead>
+        <tbody id="duration-audio-table-body">
+            <!-- Rows will be inserted dynamically by secondScript.js -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Include Your JavaScript Files -->
+<script src="script.js"></script>
+<script src="secondScript.js"></script>
+<script src="thirdScript.js"></script>
+<script src="fourthScript.js"></script>
+<script src="fifthScript.js"></script>
+
+</body>
+</html>
