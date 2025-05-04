@@ -3,7 +3,7 @@ const newData = [
     {
         type: 'baseline',
         caption: "Dog barking, & reverb: dry.",
-        audioFile: "audio/dog_baseline_dry.wav"
+        audioFile: "audio/dog_barking_baseline_dry.wav"
     },
     {
         type: 'sila',
@@ -13,7 +13,7 @@ const newData = [
     {
         type: 'baseline',
         caption: "Dog barking, & reverb: wet.",
-        audioFile: "audio/dog_baseline_wet.wav"
+        audioFile: "audio/dog_barking_baseline_wet.wav"
     },
     {
         type: 'sila',
