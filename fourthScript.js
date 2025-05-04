@@ -2,7 +2,7 @@
 const pitchData = [{
     type: 'baseline',
     caption: "Car honk, & pitch: low",
-    audioFile: "audio/dog_baseline_dry.wav"
+    audioFile: "audio/car_honk_baseline_low_pitch.wav"
 },
 {
     type: 'sila',
@@ -12,7 +12,7 @@ const pitchData = [{
 {
     type: 'baseline',
     caption: "Car honk, & pitch: high",
-    audioFile: "audio/dog_baseline_dry.wav"
+    audioFile: "audio/car_honk_baseline_high_pitch.wav"
 },
 {
     type: 'sila',
